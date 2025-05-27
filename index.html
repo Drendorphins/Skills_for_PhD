@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Experimental Skills</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,8 +14,19 @@
     }
 
     h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #1f77b4;
+    }
+
+    .section-title {
       font-size: 22px;
-      margin-bottom: 20px;
+      font-weight: bold;
+      margin: 30px 0 10px 0;
+      color: #17598d;
+      display: inline-block;
     }
 
     .accordion {
@@ -26,10 +38,12 @@
       text-align: left;
       border: none;
       outline: none;
-      font-size: 16px;
+      font-size: 20px;
+      font-weight: bold;
       transition: background-color 0.2s ease;
       margin-top: 10px;
       border-radius: 6px;
+      box-sizing: border-box;
     }
 
     .accordion:hover {
@@ -51,6 +65,7 @@
 
     .skill-name {
       font-weight: bold;
+      font-size: 16px;
       margin-bottom: 5px;
     }
 
@@ -73,23 +88,34 @@
       color: #555;
       margin-bottom: 10px;
     }
+
+    #downloadBtn {
+      background-color: #1f77b4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media print {
+      #downloadBtn {
+        display: none;
+      }
+      .panel {
+        display: block !important;
+      }
+    }
   </style>
 </head>
 <body>
 
-<!-- 导出 PDF 按钮 -->
-<button onclick="window.print()" style="
-  background-color: #1f77b4;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-bottom: 20px;
-">
-  📄 Export as PDF
-</button>
-  
+<!-- 一键导出 PDF 按钮 -->
+<button id="downloadBtn" onclick="downloadPDF()">📄 Download PDF</button>
+
 <h2>Experimental Skills Overview</h2>
 
 <!-- Cell Biology Techniques -->
@@ -168,19 +194,35 @@
 </div>
 
 <script>
-  const acc = document.getElementsByClassName("accordion");
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-</script>
+    function downloadPDF() {
+      const downloadBtn = document.getElementById("downloadBtn");
+      const panels = document.querySelectorAll('.panel');
+      const panelStates = Array.from(panels).map(panel => panel.style.display);
+  
+      // 展开所有面板
+      panels.forEach(panel => panel.style.display = "block");
+      downloadBtn.style.display = "none"; // 隐藏按钮
+  
+      setTimeout(() => {
+        const element = document.body;
+        const opt = {
+          margin: 0.3,
+          filename: 'Skills_BohanLiu.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 4 },  // 提高清晰度
+          jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+  
+        html2pdf().set(opt).from(element).save().then(() => {
+          // 恢复原状
+          downloadBtn.style.display = "block";
+          panels.forEach((panel, idx) => {
+            panel.style.display = panelStates[idx];
+          });
+        });
+      }, 300);
+    }
+  </script>
 
 </body>
 </html>
