@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Skills</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #1f77b4;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .accordion {
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+      cursor: pointer;
+      padding: 18px 20px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      transition: background 0.3s ease;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .accordion:hover {
+      background: linear-gradient(to right, #d4e2fc, #b9d6ec);
+    }
+
+    .panel {
+      background-color: white;
+      display: none;
+      overflow: hidden;
+      padding: 15px 20px;
+      border-left: 4px solid #1f77b4;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .skill-container {
+      margin-top: 15px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .bar-background {
+      width: 100%;
+      background-color: #eee;
+      height: 8px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    .bar-fill {
+      height: 8px;
+      background: linear-gradient(to right, #1f77b4, #2c92e0);
+      border-radius: 4px;
+    }
+
+    .skill-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>My Experimental Skills</h2>
+
+<button class="accordion">Cell Biology Techniques</button>
+<div class="panel">
+  <div class="skill-container">
+    <div class="skill-name">Cell culture</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 95%;"></div></div>
+    <div class="skill-desc">Maintaining adherent and suspension cells under sterile conditions.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Transfection</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 85%;"></div></div>
+    <div class="skill-desc">Efficient delivery of nucleic acids via lipofection and electroporation.</div>
+  </div>
+</div>
+
+<button class="accordion">Molecular Biology Techniques</button>
+<div class="panel">
+  <div class="skill-container">
+    <div class="skill-name">PCR & qPCR</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 90%;"></div></div>
+    <div class="skill-desc">Designing primers and analyzing gene expression levels quantitatively.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Western Blot</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 88%;"></div></div>
+    <div class="skill-desc">Protein extraction, SDS-PAGE, and antibody-based detection.</div>
+  </div>
+</div>
+
+<button class="accordion">Immunology Techniques</button>
+<div class="panel">
+  <div class="skill-container">
+    <div class="skill-name">Flow Cytometry</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 80%;"></div></div>
+    <div class="skill-desc">Multi-parameter analysis of immune cell populations.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">ELISA</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 75%;"></div></div>
+    <div class="skill-desc">Quantitative measurement of cytokines and antibodies.</div>
+  </div>
+</div>
+
+<button class="accordion">Animal Models</button>
+<div class="panel">
+  <div class="skill-container">
+    <div class="skill-name">Mouse tumor models</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 85%;"></div></div>
+    <div class="skill-desc">Tumor implantation, monitoring, and in vivo treatments in mice.</div>
+  </div>
+</div>
+
+<button class="accordion">Data Analysis & Coding</button>
+<div class="panel">
+  <div class="skill-container">
+    <div class="skill-name">Python</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 80%;"></div></div>
+    <div class="skill-desc">Data wrangling, visualization, and automation using pandas and matplotlib.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">R</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 65%;"></div></div>
+    <div class="skill-desc">Statistical analysis and plotting with tidyverse and ggplot2.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Linux</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 60%;"></div></div>
+    <div class="skill-desc">Shell scripting and server-side computation for bioinformatics.</div>
+  </div>
+</div>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
