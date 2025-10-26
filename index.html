@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Experimental Skills</title>
+  <title>Core Experimental Skills</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
+      max-width: 750px;
       margin: 40px auto;
       color: #333;
       line-height: 1.6;
@@ -86,23 +86,33 @@
 </head>
 <body>
 
-<!-- 一键导出 PDF 按钮 -->
 <button id="downloadBtn" onclick="downloadPDF()">📄 Download PDF</button>
-
-<h2>Experimental Skills Overview</h2>
+<h2>Core Experimental Skills Overview</h2>
 
 <!-- Cell Biology Techniques -->
 <button class="accordion">Cell Biology Techniques</button>
 <div class="panel">
   <div class="skill-container">
-    <div class="skill-name">Cell culture</div>
-    <div class="bar-background"><div class="bar-fill" style="width: 95%;"></div></div>
-    <div class="skill-desc">Skilled in maintaining adherent and suspension cell lines under sterile conditions.</div>
+    <div class="skill-name">Cell Culture & Passaging</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 98%;"></div></div>
+    <div class="skill-desc">
+      Maintenance, thawing, cryopreservation, and passaging of diverse cell lines under sterile conditions.<br>
+      <b>Experience with:</b> pancreatic cancer cell lines (e.g. PANC-1, CFPAC-1, SW1990, BxPC-3), primary fibroblasts, and immune cell lines (e.g. Jurkat T cells, THP-1).
+    </div>
   </div>
   <div class="skill-container">
-    <div class="skill-name">Transfection</div>
-    <div class="bar-background"><div class="bar-fill" style="width: 85%;"></div></div>
-    <div class="skill-desc">Experienced in liposome- and electroporation-based DNA/RNA delivery methods.</div>
+    <div class="skill-name">Cell Proliferation Assay (CCK-8, EdU, Colony Formation)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 90%;"></div></div>
+    <div class="skill-desc">
+      Assessment of cell viability, proliferation and long-term clonogenic ability using CCK-8, EdU incorporation, and colony formation assays.
+    </div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Migration & Invasion Assay (Transwell, Wound Healing)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 92%;"></div></div>
+    <div class="skill-desc">
+      Evaluation of cell motility and invasion using transwell migration, Matrigel invasion, and scratch (wound healing) assays.
+    </div>
   </div>
 </div>
 
@@ -110,14 +120,64 @@
 <button class="accordion">Molecular Biology Techniques</button>
 <div class="panel">
   <div class="skill-container">
-    <div class="skill-name">PCR & qPCR</div>
+    <div class="skill-name">RNA Extraction & qRT-PCR</div>
     <div class="bar-background"><div class="bar-fill" style="width: 90%;"></div></div>
-    <div class="skill-desc">Proficient in primer design, reaction optimization, and quantitative analysis.</div>
+    <div class="skill-desc">RNA isolation, cDNA synthesis, and quantitative real-time PCR; primer design and data normalization.</div>
   </div>
   <div class="skill-container">
-    <div class="skill-name">Western Blotting</div>
+    <div class="skill-name">Protein Extraction & Western Blot</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 95%;"></div></div>
+    <div class="skill-desc">Lysis, quantification, SDS-PAGE, PVDF transfer, antibody incubation, and chemiluminescent detection.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">RNA-FISH</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 90%;"></div></div>
+    <div class="skill-desc">Fluorescence in situ hybridization for subcellular localization of RNA molecules.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">mRNA Stability Detection (Actinomycin D)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 100%;"></div></div>
+    <div class="skill-desc">Assessment of mRNA half-life after transcription inhibition by Actinomycin D treatment.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Protein Stability Assay (CHX)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 100%;"></div></div>
+    <div class="skill-desc">Cycloheximide chase assay to monitor protein degradation rates.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Protein Ubiquitination Detection (MG132)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 100%;"></div></div>
+    <div class="skill-desc">Proteasome inhibitor (MG132) treatment to detect ubiquitinated proteins by Western blot.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">RNA-Protein Interaction Assays (IP, RIP, MeRIP, CHIRP)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 75%;"></div></div>
+    <div class="skill-desc">Identification of RNA-binding proteins or modified RNAs using immunoprecipitation and related techniques.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Polysome Profiling</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 70%;"></div></div>
+    <div class="skill-desc">Sucrose gradient separation to analyze mRNA translation efficiency.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">LC-MS (Liquid Chromatography-Mass Spectrometry)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 75%;"></div></div>
+    <div class="skill-desc">Analysis of proteins and peptides by LC-MS for identification and quantification.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Immunofluorescence Staining</div>
     <div class="bar-background"><div class="bar-fill" style="width: 88%;"></div></div>
-    <div class="skill-desc">Experienced in protein extraction, SDS-PAGE, and antibody-based detection.</div>
+    <div class="skill-desc">Fluorescent labeling and confocal imaging for protein/cellular markers.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Immunohistochemistry</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 80%;"></div></div>
+    <div class="skill-desc">Protein expression in tissue sections using antibody-based labeling.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Enzyme-linked Immunosorbent Assay (ELISA)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 80%;"></div></div>
+    <div class="skill-desc">Quantitative measurement of secreted proteins in media/serum.</div>
   </div>
 </div>
 
@@ -126,13 +186,18 @@
 <div class="panel">
   <div class="skill-container">
     <div class="skill-name">Flow Cytometry</div>
-    <div class="bar-background"><div class="bar-fill" style="width: 80%;"></div></div>
-    <div class="skill-desc">Skilled in multi-color staining, compensation, and data interpretation.</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 88%;"></div></div>
+    <div class="skill-desc">Immunophenotyping, intracellular cytokine detection, and quantitative immune cell analysis (FlowJo).</div>
   </div>
   <div class="skill-container">
-    <div class="skill-name">ELISA</div>
-    <div class="bar-background"><div class="bar-fill" style="width: 75%;"></div></div>
-    <div class="skill-desc">Experienced in quantifying cytokines and biomolecules in serum and culture supernatant.</div>
+    <div class="skill-name">LDH Release Assay</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 82%;"></div></div>
+    <div class="skill-desc">Measurement of cytotoxicity in tumor-immune co-cultures.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">T cell-mediated Cytotoxicity Assay</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 85%;"></div></div>
+    <div class="skill-desc">Co-culture with Jurkat T cells to assess immune killing and effector molecule expression.</div>
   </div>
 </div>
 
@@ -140,9 +205,9 @@
 <button class="accordion">Animal Models</button>
 <div class="panel">
   <div class="skill-container">
-    <div class="skill-name">In vivo mouse models</div>
-    <div class="bar-background"><div class="bar-fill" style="width: 85%;"></div></div>
-    <div class="skill-desc">Trained in mouse handling, injection, dissection, and tumor modeling.</div>
+    <div class="skill-name">In vivo Mouse Models (Orthotopic, Subcutaneous)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 82%;"></div></div>
+    <div class="skill-desc">Pancreatic cancer models via orthotopic/subcutaneous transplantation; IVIS monitoring.</div>
   </div>
 </div>
 
@@ -150,24 +215,29 @@
 <button class="accordion">Data Analysis & Programming</button>
 <div class="panel">
   <div class="skill-container">
-    <div class="skill-name">Python</div>
+    <div class="skill-name">Bulk RNA-seq Analysis (R, Python)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 90%;"></div></div>
+    <div class="skill-desc">DESeq2 for differential expression, ClusterProfiler, GSEA, pathway analysis.</div>
+  </div>
+  <div class="skill-container">
+    <div class="skill-name">Single-cell RNA-seq Analysis</div>
     <div class="bar-background"><div class="bar-fill" style="width: 80%;"></div></div>
-    <div class="skill-desc">Used in data processing, visualization (Seaborn, Matplotlib), and automation scripts.</div>
+    <div class="skill-desc">Preprocessing, batch correction, clustering, annotation, visualization (Scanpy, Seurat, scvi-tools).</div>
   </div>
   <div class="skill-container">
-    <div class="skill-name">R</div>
-    <div class="bar-background"><div class="bar-fill" style="width: 65%;"></div></div>
-    <div class="skill-desc">Applied in statistical analysis, gene expression profiling, and ggplot visualization.</div>
+    <div class="skill-name">Statistical Analysis (R, GraphPad, Python)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 88%;"></div></div>
+    <div class="skill-desc">Survival analysis (Kaplan–Meier, Cox regression), correlation, data visualization (ggplot2, Prism).</div>
   </div>
   <div class="skill-container">
-    <div class="skill-name">Linux</div>
-    <div class="bar-background"><div class="bar-fill" style="width: 60%;"></div></div>
-    <div class="skill-desc">Familiar with shell scripting, file operations, and running bioinformatics pipelines.</div>
+    <div class="skill-name">Image Processing (ImageJ, GraphPad Prism)</div>
+    <div class="bar-background"><div class="bar-fill" style="width: 82%;"></div></div>
+    <div class="skill-desc">Quantification of microscopy images, Western blots, general plotting.</div>
   </div>
 </div>
 
 <script>
-  // 折叠/展开功能
+  // Accordion functionality
   const acc = document.getElementsByClassName("accordion");
   for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
@@ -181,17 +251,14 @@
     });
   }
 
-  // 导出 PDF
+  // Download PDF (all panels expanded)
   function downloadPDF() {
     const downloadBtn = document.getElementById("downloadBtn");
     const panels = document.querySelectorAll('.panel');
     const panelStates = Array.from(panels).map(panel => panel.style.display);
 
-    // 展开所有面板
     panels.forEach(panel => panel.style.display = "block");
-    // 隐藏按钮
     downloadBtn.style.visibility = "hidden";
-
     setTimeout(() => {
       const element = document.body;
       const opt = {
@@ -202,7 +269,6 @@
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
       };
       html2pdf().set(opt).from(element).save().then(() => {
-        // 恢复按钮和面板展开/折叠状态
         downloadBtn.style.visibility = "visible";
         panels.forEach((panel, idx) => {
           panel.style.display = panelStates[idx];
@@ -211,6 +277,5 @@
     }, 300);
   }
 </script>
-
 </body>
 </html>
